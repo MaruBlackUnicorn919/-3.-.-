@@ -1,0 +1,113 @@
+Задача 1: Задайте одномерный массив из 10 целых чисел от 1 до 100. Найдите количество элементов массива, значения которых лежат в отрезке [20,90].
+
+using System;
+class Program
+{
+        static void Main(string[] args)
+    {
+        int[] array = new int[] { 13, 24, 37, 41, 52, 67, 72, 89, 97, 100 };
+
+        int count = 0;
+
+        foreach (int num in array)
+
+        {
+            if (num >= 20 && num <= 90)
+
+            {
+                count++;
+            }
+
+        }
+
+        Console.WriteLine("Количество элементов массива, значения которых лежат в отрезке [20, 90]: " + count);
+
+    }
+
+}
+
+
+
+Задача 2: Задайте массив на 10 целых чисел. Напишите программу, которая определяет количество чётных чисел в массиве.
+
+using System;
+class Program
+
+{
+     static void Main(string[] args)
+
+    {
+        int[] numbers = new int[10];
+
+        int count = 0;
+
+        Random random = new Random();
+
+        for (int i = 0; i < numbers.Length; i++)
+
+        {
+            numbers[i] = random.Next(1, 101);
+        }
+
+        for (int i = 0; i < numbers.Length; i++)
+
+        {
+            if (numbers[i] % 2 == 0)
+
+            {
+                count++;
+            }
+
+        }
+
+        Console.WriteLine("Количество четных чисел: " + count);
+
+    }
+
+}
+
+
+
+Задача 3: Задайте массив из вещественных чисел с ненулевой дробной частью. Найдите разницу между максимальным и минимальным элементов массива.
+
+using System;
+class Program
+
+{
+    static void Main(string[] args)
+
+    {
+
+        double[] numbers = { 3.14, 2.718, 1.618, 0.577, 1.414 };
+
+        double max = double.MinValue;
+
+        double min = double.MaxValue;
+
+        foreach (double number in numbers)
+
+        {
+
+            if (number > max)
+
+            {
+                max = number;
+            }
+
+            if (number < min)
+
+            {
+                min = number;
+            }
+
+        }
+
+        double difference = max - min;
+
+        Console.WriteLine("Разница между максимальным и минимальным элементами массива: " + difference);
+
+    }
+
+}
+
+
